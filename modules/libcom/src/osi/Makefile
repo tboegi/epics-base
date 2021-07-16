@@ -14,6 +14,7 @@ INC += compilerSpecific.h
 
 INC += osiFileName.h
 INC += osiSock.h
+INC += osiSock46.h
 INC += osdSock.h
 INC += epicsInterrupt.h
 INC += osdInterrupt.h
@@ -88,6 +89,7 @@ Com_SRCS += osdSock.c
 Com_SRCS += osdSockAddrReuse.cpp
 Com_SRCS += osdSockUnsentCount.c
 Com_SRCS += osiSock.c
+Com_SRCS += osiSock46.c
 Com_SRCS += systemCallIntMech.cpp
 Com_SRCS += epicsSocketConvertErrnoToString.cpp
 Com_SRCS += osdAssert.c
