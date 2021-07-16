@@ -225,6 +225,12 @@ LIBCOM_API SOCKET epicsStdCall epicsSocketCreateBindConnect46(
                      ai->ai_family, (unsigned)ai->ai_addrlen,
                      (unsigned)socklen, status,
                      status ? strerror(SOCKERRNO) : "");
+        if (!status) {
+          return fd;
+        } else {
+          epicsSocketDestroy(fd);
+          fd = INVALID_SOCKET;
+        }
       }
     }
   }
